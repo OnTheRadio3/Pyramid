@@ -1,10 +1,9 @@
 #include <iostream>
 #include <iomanip>
-#include <cstdint>
 
 
-void printPyramid(uint64_t height) {
-	uint64_t x = 0, y = height;
+void printPyramid(int height) {
+	int x = 0, y = height;
 
 	
 	for (int j = 0; j < y; j++, x++) {
