@@ -1,13 +1,15 @@
 #include <iostream>
 #include <iomanip>
 
+constexpr int PADDING = 3;
+
 
 void printPyramid(int height) {
 	int x = 0, y = height;
 
 	
 	for (int j = 0; j < y; j++, x++) {
-		std::cout << '\n' << std::setw(3 + (y - x));
+		std::cout << '\n' << std::setw(PADDING + (y - x));
 
 		for (int i = 0; i < x * 2 + 1; i++) { 
 			std::cout << '*';
