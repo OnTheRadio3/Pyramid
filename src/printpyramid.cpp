@@ -9,11 +9,12 @@ void printPyramid(int height) {
 
 	
 	for (int j = 0; j < y; j++, x++) {
-		std::cout << '\n' << std::setw(PADDING + (y - x));
-
-		for (int i = 0; i < x * 2 + 1; i++) { 
-			std::cout << '*';
-		}
+		std::cout << '\n'
+		<< std::setfill(' ')
+		<< std::setw(PADDING + (y - x))
+		<< '*'
+		<< std::setfill('*')
+		<< std::setw(x*2 + 1) << ' ';
 	}
 
 	return;
