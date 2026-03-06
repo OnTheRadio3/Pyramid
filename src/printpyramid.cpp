@@ -4,17 +4,17 @@
 constexpr int PADDING = 3;
 
 
-void printPyramid(int height) {
-	int x = 0, y = height;
+void printPyramid(const int height) {
+	int x = 0;
 
 	
-	for (int j = 0; j < y; j++, x++) {
+	for (int j = 0; j < height; j++, x++) {
 		std::cout << '\n'
 		<< std::setfill(' ')
-		<< std::setw(PADDING + (y - x))
+		<< std::setw(PADDING + (height - x))
 		<< '*'
 		<< std::setfill('*')
-		<< std::setw(x*2 + 1) << ' ';
+		<< std::setw(x + x + 1) << ' ';
 	}
 
 	return;
